@@ -3,6 +3,9 @@ import 'package:flutter/material.dart';
 // Library imports
 import 'dart:math';
 
+// Package imports
+import 'package:transparent_image/transparent_image.dart';
+
 // Widget imports
 import 'package:roll_dice_app/widgets/styled_text.dart';
 
@@ -30,8 +33,9 @@ class _DiceRollerState extends State<DiceRoller> {
     return Column(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Image.asset(
-          'assets/images/dice-$currentDiceRoll.png',
+        FadeInImage(
+          placeholder: MemoryImage(kTransparentImage),
+          image: AssetImage('assets/images/dice-$currentDiceRoll.png'),
           width: 256,
         ),
         const SizedBox(
