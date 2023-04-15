@@ -16,6 +16,7 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(useMaterial3: true),
       home: const Application(),
+      title: "Rolling Dice",
     );
   }
 }
